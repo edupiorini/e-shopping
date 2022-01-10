@@ -1,9 +1,7 @@
 package com.piorini.userapi.controller;
 
 import com.piorini.userapi.dto.UserDTO;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -29,7 +27,7 @@ public class UserController {
         userDTO.setAdress("rua spring, 95, taubate");
         userDTO.setCpf("12345678901");
         userDTO.setPhoneNumber("12999995555");
-        userDTO.setDataCadastro(new Date());
+        userDTO.setCreationDate(new Date());
 
         // User 2
         UserDTO userDTO2 = new UserDTO();
@@ -38,7 +36,7 @@ public class UserController {
         userDTO2.setAdress("rua spring, 96, taubate");
         userDTO2.setCpf("12345678902");
         userDTO2.setPhoneNumber("12999995556");
-        userDTO2.setDataCadastro(new Date());
+        userDTO2.setCreationDate(new Date());
 
         // User 3
         UserDTO userDTO3 = new UserDTO();
@@ -47,7 +45,7 @@ public class UserController {
         userDTO3.setAdress("rua spring, 97, taubate");
         userDTO3.setCpf("12345678903");
         userDTO3.setPhoneNumber("12999995557");
-        userDTO3.setDataCadastro(new Date());
+        userDTO3.setCreationDate(new Date());
 
         // Add to list users
         users.add(userDTO);
@@ -69,5 +67,13 @@ public class UserController {
             }
         }
              return null;
+    }
+
+    @PostMapping("/newUser")
+    public UserDTO insert(@RequestBody UserDTO userDTO) {
+        userDTO.setCreationDate(new Date());
+        users.add(userDTO);
+
+        return userDTO;
     }
 }

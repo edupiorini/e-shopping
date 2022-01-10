@@ -9,7 +9,7 @@ public class UserDTO {
     private String adress;
     private String email;
     private String phoneNumber;
-    private Date dataCadastro;
+    private Date creationDate;
 
     public String getName() {
         return name;
@@ -51,11 +51,11 @@ public class UserDTO {
         this.phoneNumber = phoneNumber;
     }
 
-    public Date getDataCadastro() {
-        return dataCadastro;
+    public Date getCreationDate() {
+        return creationDate;
     }
 
-    public void setDataCadastro(Date dataCadastro) {
-        this.dataCadastro = dataCadastro;
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 }
