@@ -76,4 +76,16 @@ public class UserController {
 
         return userDTO;
     }
+
+    @DeleteMapping("/users/{cpf}")
+    public boolean remove(@PathVariable String cpf) {
+        boolean status = false;
+        for (UserDTO userFilter : users ) {
+            if (userFilter.getCpf().equals(cpf)) {
+                users.remove(userFilter);
+                status = true;
+            }
+        }
+        return status;
+    }
 }
