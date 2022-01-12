@@ -1,5 +1,7 @@
 package com.piorini.userapi.dto;
 
+import com.piorini.userapi.model.User;
+
 import java.util.Date;
 
 public class UserDTO {
@@ -10,6 +12,19 @@ public class UserDTO {
     private String email;
     private String phoneNumber;
     private Date creationDate;
+
+    public static UserDTO convert(User user) {
+        UserDTO userDTO = new UserDTO();
+
+        userDTO.setName(user.getName());
+        userDTO.setCpf(user.getCpf());
+        userDTO.setAddress(user.getAddress());
+        userDTO.setEmail(user.getEmail());
+        userDTO.setPhoneNumber(user.getPhoneNumber());
+        userDTO.setCreationDate(user.getCreationDate());
+
+        return userDTO;
+    }
 
     public String getName() {
         return name;
