@@ -24,7 +24,7 @@ public class UserController {
         UserDTO userDTO = new UserDTO();
         userDTO.setName("Eduardo");
         userDTO.setEmail("edupiorini@spring.com");
-        userDTO.setAdress("rua spring, 95, taubate");
+        userDTO.setAddress("rua spring, 95, taubate");
         userDTO.setCpf("12345678901");
         userDTO.setPhoneNumber("12999995555");
         userDTO.setCreationDate(new Date());
@@ -33,7 +33,7 @@ public class UserController {
         UserDTO userDTO2 = new UserDTO();
         userDTO2.setName("Laura");
         userDTO2.setEmail("laurapiorini@spring.com");
-        userDTO2.setAdress("rua spring, 96, taubate");
+        userDTO2.setAddress("rua spring, 96, taubate");
         userDTO2.setCpf("12345678902");
         userDTO2.setPhoneNumber("12999995556");
         userDTO2.setCreationDate(new Date());
@@ -42,7 +42,7 @@ public class UserController {
         UserDTO userDTO3 = new UserDTO();
         userDTO3.setName("Melissa");
         userDTO3.setEmail("melpiorini@spring.com");
-        userDTO3.setAdress("rua spring, 97, taubate");
+        userDTO3.setAddress("rua spring, 97, taubate");
         userDTO3.setCpf("12345678903");
         userDTO3.setPhoneNumber("12999995557");
         userDTO3.setCreationDate(new Date());

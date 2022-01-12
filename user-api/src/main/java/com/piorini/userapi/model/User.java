@@ -1,15 +1,37 @@
-package com.piorini.userapi.dto;
+package com.piorini.userapi.model;
 
+import com.piorini.userapi.dto.UserDTO;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
-public class UserDTO {
-
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String name;
     private String cpf;
     private String address;
     private String email;
     private String phoneNumber;
     private Date creationDate;
+
+    public static User convert(UserDTO userDTO) {
+        User user = new User();
+
+        user.setName(userDTO.getName());
+        user.setCpf(userDTO.getCpf());
+        user.setAddress(userDTO.getAddress());
+        user.setEmail(userDTO.getEmail());
+        user.setPhoneNumber(userDTO.getPhoneNumber());
+        user.setCreationDate(userDTO.getCreationDate());
+
+        return user;
+    }
 
     public String getName() {
         return name;
