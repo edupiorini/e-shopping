@@ -31,9 +31,18 @@ public class UserService {
         return user.map(UserDTO::convert).orElse(null);
     }
 
+    public UserDTO findByCpf(String cpf) {
+        User user = userRepository.findByCpf(cpf);
+
+        if (user != null) {
+            return UserDTO.convert(user);
+        }
+        return null;
+    }
+
     public UserDTO save(UserDTO userDTO) {
         User user = userRepository.save(User.convert(userDTO));
-        
+
         return UserDTO.convert(user);
     }
 
