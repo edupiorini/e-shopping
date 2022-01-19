@@ -33,7 +33,7 @@ public class UserController {
 //        userDTO.setAddress("rua spring, 95, taubate");
 //        userDTO.setCpf("12345678901");
 //        userDTO.setPhoneNumber("12999995555");
-//        userDTO.setCreationDate(new Date());
+      //  userDTO.setCreationDate(new Date());
 //
 //        // User 2
 //        UserDTO userDTO2 = new UserDTO();

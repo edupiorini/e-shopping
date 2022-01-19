@@ -6,12 +6,13 @@ import java.util.Date;
 
 public class UserDTO {
 
+    private Long id;
     private String name;
     private String cpf;
     private String address;
     private String email;
     private String phoneNumber;
-    private Date creationDate;
+    private final Date creationDate = new Date();
 
     public static UserDTO convert(User user) {
         UserDTO userDTO = new UserDTO();
@@ -21,10 +22,11 @@ public class UserDTO {
         userDTO.setAddress(user.getAddress());
         userDTO.setEmail(user.getEmail());
         userDTO.setPhoneNumber(user.getPhoneNumber());
-        userDTO.setCreationDate(user.getCreationDate());
 
         return userDTO;
     }
+
+
 
     public String getName() {
         return name;
@@ -70,7 +72,4 @@ public class UserDTO {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
 }

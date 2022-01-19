@@ -12,7 +12,7 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String name;
     private String cpf;
     private String address;
@@ -23,6 +23,7 @@ public class User {
     public static User convert(UserDTO userDTO) {
         User user = new User();
 
+
         user.setName(userDTO.getName());
         user.setCpf(userDTO.getCpf());
         user.setAddress(userDTO.getAddress());
@@ -32,6 +33,7 @@ public class User {
 
         return user;
     }
+
 
     public String getName() {
         return name;
