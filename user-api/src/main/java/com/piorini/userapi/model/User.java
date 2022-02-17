@@ -19,7 +19,6 @@ public class User {
     private String email;
     private String phoneNumber;
     private Date creationDate;
-
     public static User convert(UserDTO userDTO) {
         User user = new User();
 
