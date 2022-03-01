@@ -25,7 +25,7 @@ public class ProductDTO {
                 product.getProductIdentifier());
         productDTO.setDescricao(product.getDescricao());
         if (product.getCategory() != null) {
-            productDTO.setCategoryDTO(
+            productDTO.setCategory(
                     CategoryDTO.convert(product.getCategory()));
         }
         return productDTO;

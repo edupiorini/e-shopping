@@ -1,5 +1,7 @@
 package com.piorini.productapi.model;
 
+import com.piorini.productapi.dto.CategoryDTO;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
