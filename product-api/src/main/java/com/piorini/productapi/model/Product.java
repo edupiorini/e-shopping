@@ -1,5 +1,7 @@
 package com.piorini.productapi.model;
 
+import com.piorini.productapi.dto.ProductDTO;
+
 import javax.persistence.*;
 
 @Entity(name="product")
