@@ -32,4 +32,13 @@ public class ProductService {
                 .map(ProductDTO::convert)
                 .collect(Collectors.toList());
     }
+
+    public ProductDTO findByProductIdentifier(String productIdentifier) {
+        Product product = productRepository.findByProductIdentifier(productIdentifier);
+
+        if (product != null) {
+            return ProductDTO.convert(product);
+        }
+        return null;
+    }
 }
