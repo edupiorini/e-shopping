@@ -23,4 +23,13 @@ public class ProductService {
                 .map(ProductDTO::convert)
                 .collect(Collectors.toList());
     }
+
+    public List<ProductDTO> getProductByCategoryId(Long categoryId) {
+        List<Product> products = productRepository.getProductByCategory(categoryId);
+
+        return products
+                .stream()
+                .map(ProductDTO::convert)
+                .collect(Collectors.toList());
+    }
 }
