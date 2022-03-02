@@ -41,4 +41,10 @@ public class ProductService {
         }
         return null;
     }
+
+    public ProductDTO save(ProductDTO productDTO) {
+        Product product = productRepository.save(Product.convert(productDTO));
+
+        return ProductDTO.convert(product);
+    }
 }
