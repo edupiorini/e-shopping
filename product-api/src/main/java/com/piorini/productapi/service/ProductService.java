@@ -49,9 +49,11 @@ public class ProductService {
         return ProductDTO.convert(product);
     }
 
-    public void delete(long productId) {
+    public ProductDTO delete(long productId) {
         Optional<Product> product = productRepository.findById(productId);
 
         product.ifPresent(value -> productRepository.delete(value));
+
+        return null;
     }
 }
